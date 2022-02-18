@@ -1,0 +1,33 @@
+:root {
+    --clr-grey-background: #f3f3f3;
+}
+
+.ecom-nav {
+    min-height: 7rem;
+    background-color: var(--white);
+}
+
+body {
+    background-color: var(--clr-grey-background);
+}
+
+.ecom-nav a {
+    display: flex;
+}
+
+.search-container {
+    width: 50%;
+    margin: auto;
+}
+
+.searchbar {
+    font-size: var(--fs-h6);
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    flex-shrink: 1;
+}
+
+.ecom-main {
+    margin-top: 10rem;
+}
