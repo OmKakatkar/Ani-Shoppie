@@ -15,6 +15,26 @@ body {
     display: flex;
 }
 
+.nav-link {
+    position: relative;
+}
+
+.nav-link > .dropdown {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 32px;
+    left: -32px;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    width: max-content;
+}
+
+.nav-link:hover .dropdown {
+    display: block;
+}
+
 .search-container {
     width: 50%;
     margin: auto;
