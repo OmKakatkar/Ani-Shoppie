@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ani-Shoppie | SignUp</title>
+        <title>Ani-Shoppie | Product List</title>
         <!-- Ani-Design Stylesheet -->
         <link
             rel="stylesheet"
@@ -30,6 +30,7 @@
                 <label for="searchBar" class="search-container">
                     <input
                         type="search"
+                        name="searchBar"
                         class="searchbar text-md"
                         id="searchBar"
                         placeholder="Search..."
@@ -65,41 +66,184 @@
             </nav>
         </header>
         <aside class="aside-nav filter-container">
-            <h3 class="filter-heading">Components</h3>
+            <div class="filter-head-container">
+                <h4 class="filter-heading text-xlg">Filters</h4>
+                <button class="filter-clear">Clear All</button>
+            </div>
+            <div class="filter-type-container">
+                <h5 class="text-lg">Price</h5>
+                <ul class="filter-list price-range-labels">
+                    <li>50</li>
+                    <li>400</li>
+                    <li>800</li>
+                </ul>
+                <input
+                    type="range"
+                    min="50"
+                    max="800"
+                    value="400"
+                    class="price-range-slider"
+                    id="price-range"
+                    step="10"
+                />
+            </div>
+            <div class="filter-type-container">
+                <h5 class="text-lg">Category</h5>
+                <ul class="filter-list">
+                    <li>
+                        <label for="cold-brew" class="checkbox">
+                            <input
+                                type="checkbox"
+                                id="cold-brew"
+                                class="checkbox-input"
+                                checked
+                            />
+                            <div class="checkbox-icon"></div>
+                            Cold Brew
+                        </label>
+                    </li>
+                    <li>
+                        <label for="iced-coffee" class="checkbox">
+                            <input
+                                type="checkbox"
+                                id="iced-coffee"
+                                class="checkbox-input"
+                                checked
+                            />
+                            <div class="checkbox-icon"></div>
+                            Iced Coffee
+                        </label>
+                    </li>
+                    <li>
+                        <label for="hot-coffee" class="checkbox">
+                            <input
+                                type="checkbox"
+                                id="hot-coffee"
+                                class="checkbox-input"
+                                checked
+                            />
+                            <div class="checkbox-icon"></div>
+                            Hot Coffee
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter-type-container">
+                <h5 class="text-lg">Rating</h5>
+                <ul class="filter-list">
+                    <li>
+                        <label for="stars-4" class="radio">
+                            <input
+                                type="radio"
+                                name="rating"
+                                id="stars-4"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            4 star & above
+                        </label>
+                    </li>
+                    <li>
+                        <label for="stars-3" class="radio">
+                            <input
+                                type="radio"
+                                name="rating"
+                                id="stars-3"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            3 star & above
+                        </label>
+                    </li>
+                    <li>
+                        <label for="stars-2" class="radio">
+                            <input
+                                type="radio"
+                                name="rating"
+                                id="stars-2"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            2 star & above
+                        </label>
+                    </li>
+                    <li>
+                        <label for="stars-1" class="radio">
+                            <input
+                                type="radio"
+                                name="rating"
+                                id="stars-1"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            1 star & above
+                        </label>
+                    </li>
+                    <li>
+                        <label for="unrated" class="radio">
+                            <input
+                                type="radio"
+                                name="rating"
+                                id="unrated"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            Unrated
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter-type-container">
+                <h5 class="text-lg">Sort By</h5>
+                <ul class="filter-list">
+                    <li>
+                        <label for="sort-latest" class="radio">
+                            <input
+                                type="radio"
+                                name="sort"
+                                id="sort-latest"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            Latest
+                        </label>
+                    </li>
+                    <li>
+                        <label for="sort-cheapest" class="radio">
+                            <input
+                                type="radio"
+                                name="sort"
+                                id="sort-cheapest"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            Cheapest
+                        </label>
+                    </li>
+                    <li>
+                        <label for="sort-popular" class="radio">
+                            <input
+                                type="radio"
+                                name="sort"
+                                id="sort-popular"
+                                class="radio-input"
+                            />
+                            <div class="radio-icon"></div>
+                            Popular
+                        </label>
+                    </li>
+                </ul>
+            </div>
         </aside>
         <main class="product-main">
-            <h1 class="text-xhuge text-center">Wishlist</h1>
+            <h1 class="text-xhuge text-center">Products</h1>
             <div class="container flex-container">
                 <article class="card rounded">
                     <div class="badge hidden">Best Seller</div>
                     <div>
                         <img src="../../assets/coffee.jpg" alt="Coffee" />
-                        <button>
-                            <i class="fas fa-heart icon wishlist"></i>
-                        </button>
                     </div>
-                    <div class="card-body">
-                        <h3 class="text-huge">Caffè latte</h3>
-                        <p>
-                            Caffè latte is a coffee-based drink made primarily
-                            from espresso and steamed milk.
-                        </p>
-                        <div class="price">
-                            <span class="discount-price">Rs. 199</span>
-                            <span class="original-price">Rs. 219</span>
-                            <span class="offer">10% off</span>
-                        </div>
-                        <button class="btn bg-blue rounded">Add to Cart</button>
-                        <button class="btn rounded" disabled>Go to Cart</button>
-                    </div>
-                </article>
-
-                <article class="card rounded">
-                    <div class="badge">Best Seller</div>
-                    <div>
-                        <img src="../../assets/coffee.jpg" alt="Coffee" />
-                    </div>
-                    <button>
+                    <button class="icon-btn">
                         <i class="fas fa-heart icon wishlist"></i>
                     </button>
                     <div class="card-body">
@@ -113,40 +257,19 @@
                             <span class="original-price">Rs. 219</span>
                             <span class="offer">10% off</span>
                         </div>
-                        <button class="btn bd-blue rounded">Add to Cart</button>
-                        <button class="btn rounded" disabled>Go to Cart</button>
+                        <button class="btn bg-blue rounded">Add to Cart</button>
+                        <button class="btn bg-blue rounded" disabled>
+                            Go to Cart
+                        </button>
                     </div>
                 </article>
+
                 <article class="card rounded">
                     <div class="badge hidden">Best Seller</div>
                     <div>
                         <img src="../../assets/coffee.jpg" alt="Coffee" />
-                        <button>
-                            <i class="fas fa-heart icon wishlist"></i>
-                        </button>
                     </div>
-                    <div class="card-body">
-                        <h3 class="text-huge">Caffè latte</h3>
-                        <p>
-                            Caffè latte is a coffee-based drink made primarily
-                            from espresso and steamed milk.
-                        </p>
-                        <div class="price">
-                            <span class="discount-price">Rs. 199</span>
-                            <span class="original-price">Rs. 219</span>
-                            <span class="offer">10% off</span>
-                        </div>
-                        <button class="btn bg-blue rounded">Add to Cart</button>
-                        <button class="btn rounded" disabled>Go to Cart</button>
-                    </div>
-                </article>
-
-                <article class="card rounded">
-                    <div class="badge">Best Seller</div>
-                    <div>
-                        <img src="../../assets/coffee.jpg" alt="Coffee" />
-                    </div>
-                    <button>
+                    <button class="icon-btn">
                         <i class="fas fa-heart icon wishlist"></i>
                     </button>
                     <div class="card-body">
@@ -160,40 +283,19 @@
                             <span class="original-price">Rs. 219</span>
                             <span class="offer">10% off</span>
                         </div>
-                        <button class="btn bd-blue rounded">Add to Cart</button>
-                        <button class="btn rounded" disabled>Go to Cart</button>
+                        <button class="btn bg-blue rounded">Add to Cart</button>
+                        <button class="btn bg-blue rounded" disabled>
+                            Go to Cart
+                        </button>
                     </div>
                 </article>
+
                 <article class="card rounded">
                     <div class="badge hidden">Best Seller</div>
                     <div>
                         <img src="../../assets/coffee.jpg" alt="Coffee" />
-                        <button>
-                            <i class="fas fa-heart icon wishlist"></i>
-                        </button>
                     </div>
-                    <div class="card-body">
-                        <h3 class="text-huge">Caffè latte</h3>
-                        <p>
-                            Caffè latte is a coffee-based drink made primarily
-                            from espresso and steamed milk.
-                        </p>
-                        <div class="price">
-                            <span class="discount-price">Rs. 199</span>
-                            <span class="original-price">Rs. 219</span>
-                            <span class="offer">10% off</span>
-                        </div>
-                        <button class="btn bg-blue rounded">Add to Cart</button>
-                        <button class="btn rounded" disabled>Go to Cart</button>
-                    </div>
-                </article>
-
-                <article class="card rounded">
-                    <div class="badge">Best Seller</div>
-                    <div>
-                        <img src="../../assets/coffee.jpg" alt="Coffee" />
-                    </div>
-                    <button>
+                    <button class="icon-btn">
                         <i class="fas fa-heart icon wishlist"></i>
                     </button>
                     <div class="card-body">
@@ -207,8 +309,62 @@
                             <span class="original-price">Rs. 219</span>
                             <span class="offer">10% off</span>
                         </div>
-                        <button class="btn bd-blue rounded">Add to Cart</button>
-                        <button class="btn rounded" disabled>Go to Cart</button>
+                        <button class="btn bg-blue rounded">Add to Cart</button>
+                        <button class="btn bg-blue rounded" disabled>
+                            Go to Cart
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card rounded">
+                    <div class="badge hidden">Best Seller</div>
+                    <div>
+                        <img src="../../assets/coffee.jpg" alt="Coffee" />
+                    </div>
+                    <button class="icon-btn">
+                        <i class="fas fa-heart icon wishlist"></i>
+                    </button>
+                    <div class="card-body">
+                        <h3 class="text-huge">Caffè latte</h3>
+                        <p>
+                            Caffè latte is a coffee-based drink made primarily
+                            from espresso and steamed milk.
+                        </p>
+                        <div class="price">
+                            <span class="discount-price">Rs. 199</span>
+                            <span class="original-price">Rs. 219</span>
+                            <span class="offer">10% off</span>
+                        </div>
+                        <button class="btn bg-blue rounded">Add to Cart</button>
+                        <button class="btn bg-blue rounded" disabled>
+                            Go to Cart
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card rounded">
+                    <div class="badge hidden">Best Seller</div>
+                    <div>
+                        <img src="../../assets/coffee.jpg" alt="Coffee" />
+                    </div>
+                    <button class="icon-btn">
+                        <i class="fas fa-heart icon wishlist"></i>
+                    </button>
+                    <div class="card-body">
+                        <h3 class="text-huge">Caffè latte</h3>
+                        <p>
+                            Caffè latte is a coffee-based drink made primarily
+                            from espresso and steamed milk.
+                        </p>
+                        <div class="price">
+                            <span class="discount-price">Rs. 199</span>
+                            <span class="original-price">Rs. 219</span>
+                            <span class="offer">10% off</span>
+                        </div>
+                        <button class="btn bg-blue rounded">Add to Cart</button>
+                        <button class="btn bg-blue rounded" disabled>
+                            Go to Cart
+                        </button>
                     </div>
                 </article>
             </div>
