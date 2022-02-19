@@ -5,6 +5,7 @@
 .ecom-nav {
     min-height: 7rem;
     background-color: var(--white);
+    z-index: 99999;
 }
 
 body {
@@ -50,4 +51,9 @@ body {
 
 .ecom-main {
     margin-top: 10rem;
+}
+
+.nav .badge {
+    top: -12px;
+    right: 0;
 }
