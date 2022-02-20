@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ani-Shoppie | Cart</title>
+        <!-- Ani-Design Stylesheet -->
+        <link
+            rel="stylesheet"
+            href="https://ani-design.netlify.app/css/main.css"
+        />
+        <!-- Your Icon CDN here -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+        <!-- Your Stylesheet here -->
+        <link rel="stylesheet" href="../../common.css" />
+        <link rel="stylesheet" href="cart.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="nav fix-top ecom-nav">
+                <div class="brand">
+                    <a href="#" class="brand-name">ani shoppie</a>
+                </div>
+                <label for="searchBar" class="search-container">
+                    <input
+                        type="search"
+                        class="searchbar text-md"
+                        id="searchBar"
+                        placeholder="Search..."
+                    />
+                </label>
+                <ul class="nav-link-container flex-container">
+                    <li class="nav-link">
+                        <a href="#" class="flex-container flex-column">
+                            <i class="fas fa-user text-lg"></i>
+                            <span class="text-sm">Profile</span>
+                        </a>
+                        <div class="dropdown">
+                            <button class="btn rounded bd-red">Log Out</button>
+                        </div>
+                    </li>
+                    <li class="nav-link">
+                        <a
+                            href="#"
+                            class="flex-container flex-column icon-badge"
+                        >
+                            <i class="fas fa-shopping-cart text-lg"></i>
+                            <span class="text-sm">My Cart</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a
+                            href="#"
+                            class="flex-container flex-column icon-badge"
+                        >
+                            <i class="fas fa-heart text-lg"></i>
+                            <span class="text-sm">Wishlist</span>
+                            <span class="badge">11</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="ecom-main flex-container flex-column">
+            <h1 class="text-xhuge text-center">Cart</h1>
+            <article class="card card-horizontal flex rounded ecom-card">
+                <div class="badge">Best Seller</div>
+                <div class="image flex">
+                    <img src="../../assets/coffee.jpg" alt="Coffee" />
+                </div>
+                <div class="card-body">
+                    <h3 class="text-xlg">Caffè latte</h3>
+                    <div class="price">
+                        <span class="discount-price text-xsm">Rs. 199</span>
+                    </div>
+                    <div class="order-qty-container">
+                        <button class="btn font-bold">-</button>
+                        <div class="order-quantity">2</div>
+                        <button class="btn font-bold">+</button>
+                    </div>
+                    <div class="button-container">
+                        <button class="btn rounded bg-blue">
+                            Move to Wishlist
+                        </button>
+                        <button class="btn rounded bd-red">
+                            Remove from Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="card card-horizontal flex rounded ecom-card">
+                <div class="image flex">
+                    <img src="../../assets/coffee.jpg" alt="Coffee" />
+                </div>
+                <div class="card-body">
+                    <h3 class="text-xlg">Ice Coffee</h3>
+                    <div class="price">
+                        <span class="discount-price text-xsm">Rs. 315</span>
+                    </div>
+                    <div class="order-qty-container">
+                        <button class="btn font-bold">-</button>
+                        <div class="order-quantity">2</div>
+                        <button class="btn font-bold">+</button>
+                    </div>
+                    <div class="button-container">
+                        <button class="btn rounded bg-blue">
+                            Move to Wishlist
+                        </button>
+                        <button class="btn rounded bd-red">
+                            Remove from Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <article class="card card-horizontal flex rounded ecom-card">
+                <div class="image flex">
+                    <img src="../../assets/coffee.jpg" alt="Coffee" />
+                </div>
+                <div class="card-body">
+                    <h3 class="text-xlg">Caffè latte sp. Art</h3>
+                    <div class="price">
+                        <span class="discount-price text-xsm">Rs. 273</span>
+                    </div>
+                    <div class="order-qty-container">
+                        <button class="btn font-bold">-</button>
+                        <div class="order-quantity">1</div>
+                        <button class="btn font-bold">+</button>
+                    </div>
+                    <div class="button-container">
+                        <button class="btn rounded bg-blue">
+                            Move to Wishlist
+                        </button>
+                        <button class="btn rounded bd-red">
+                            Remove from Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <aside class="cart-summary">
+            <header>Order Summary</header>
+            <div class="cart-summary-row">
+                <span> Subtotal </span>
+                <span> Rs 796 </span>
+            </div>
+            <div class="cart-summary-row">
+                <span> Shipping </span>
+                <span> Rs 50 </span>
+            </div>
+            <hr />
+            <div class="cart-summary-row">
+                <span> Total </span>
+                <span> Rs 1351 </span>
+            </div>
+            <div class="cart-summary-row">
+                <button class="btn bg-green rounded summary-checkout">
+                    Checkout
+                </button>
+            </div>
+        </aside>
+    </body>
+</html>
