@@ -1,0 +1,49 @@
+.button-container,
+.order-qty-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.order-qty-container {
+    align-items: center;
+    width: fit-content;
+    font-size: var(--fs-h4);
+}
+
+.order-qty-container button.btn {
+    font-size: var(--fs-h4);
+    margin: 0;
+    line-height: 1rem;
+    height: 100%;
+}
+
+.ecom-card {
+    max-height: 18rem;
+}
+
+.cart-summary {
+    position: fixed;
+    top: 10rem;
+    right: 0;
+    background-color: var(--white);
+    width: 40rem;
+    margin-right: 2rem;
+}
+
+.cart-summary header {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem;
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-h5);
+    padding: 1rem;
+}
+
+.summary-checkout {
+    width: 75%;
+    margin: auto;
+}
